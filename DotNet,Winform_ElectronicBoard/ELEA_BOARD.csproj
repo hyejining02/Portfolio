@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.props')" />
+  <Import Project="..\packages\chromiumembeddedframework.runtime.win-x86.136.1.4\build\chromiumembeddedframework.runtime.win-x86.props" Condition="Exists('..\packages\chromiumembeddedframework.runtime.win-x86.136.1.4\build\chromiumembeddedframework.runtime.win-x86.props')" />
+  <Import Project="..\packages\chromiumembeddedframework.runtime.win-x64.136.1.4\build\chromiumembeddedframework.runtime.win-x64.props" Condition="Exists('..\packages\chromiumembeddedframework.runtime.win-x64.136.1.4\build\chromiumembeddedframework.runtime.win-x64.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{362D05EF-B2F7-4E55-90EE-17587F6377C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ELEA_BOARD</RootNamespace>
+    <AssemblyName>ELEA_BOARD</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ELEA_CLASS_AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=136.1.40.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.136.1.40\lib\net462\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=136.1.40.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.Common.136.1.40\lib\net462\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=136.1.40.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\packages\CefSharp.WinForms.136.1.40\lib\net462\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.5\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3240.44\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3240.44\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.3240.44, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3240.44\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.5\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.5\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DrawingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrawingForm.Designer.cs">
+      <DependentUpon>DrawingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExitPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitPop.Designer.cs">
+      <DependentUpon>ExitPop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DrawingForm.resx">
+      <DependentUpon>DrawingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitPop.resx">
+      <DependentUpon>ExitPop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_pen_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_highlight_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_eraser_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_board_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_elea_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board_color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn_BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_menu_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser1_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser3_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser3_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser4_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid_bgc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight_color1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight_color1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight_color2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight_color2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight_color3_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight_color3_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_board_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_board_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_elea_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_elea_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_eraser_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_eraser_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_highlight_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_highlight_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_pen_off1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_pen_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color1_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color1_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color2_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color2_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color3_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color3_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color4_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color4_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color5_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color5_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color6_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_color6_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\size_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar_black1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar_grey1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_lever1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\image\exit_edit.png" />
+    <None Include="bin\Release\image\search_file.png" />
+    <None Include="bin\Release\image\exit_ver2.png" />
+    <None Include="bin\Release\image\exit_ver2_1.png" />
+    <Content Include="ELEA_CLASS_AppIcon.ico" />
+    <None Include="Resources\Exit_Msg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.3240.44\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('..\packages\chromiumembeddedframework.runtime.win-x64.136.1.4\build\chromiumembeddedframework.runtime.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\chromiumembeddedframework.runtime.win-x64.136.1.4\build\chromiumembeddedframework.runtime.win-x64.props'))" />
+    <Error Condition="!Exists('..\packages\chromiumembeddedframework.runtime.win-x86.136.1.4\build\chromiumembeddedframework.runtime.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\chromiumembeddedframework.runtime.win-x86.136.1.4\build\chromiumembeddedframework.runtime.win-x86.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.targets'))" />
+  </Target>
+  <Import Project="..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.136.1.40\build\CefSharp.Common.targets')" />
+</Project>
